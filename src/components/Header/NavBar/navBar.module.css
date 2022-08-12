@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   color: rgb(var(--white));
+  position: relative;
 }
 
 .nav_bar__left > span:nth-child(2) {
@@ -63,10 +64,10 @@
 .nav_bar__button {
   color: rgb(var(--white));
   fill: rgb(var(--white));
+  cursor: pointer;
 }
 
 .nav_bar__button:hover {
-  cursor: pointer;
   color: rgba(var(--white), 0.6);
   fill: rgba(var(--white), 0.6);
 }
@@ -84,4 +85,55 @@
 
 .nav_bar__authorization {
   font-weight: 500;
+}
+
+.nav_bar__language > ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.nav_bar__language > ul > li {
+  padding: 1em;
+  width: 15em;
+  font-size: 1rem;
+}
+.nav_bar__language > ul > li:hover {
+  color: rgb(var(--primary));
+}
+
+.nav_bar__notification {
+  text-align: center;
+}
+.nav_bar__notification--guest {
+  display: grid;
+  grid-template-rows: auto min-content;
+  height: min-content;
+  width: min-content;
+  box-sizing: content-box;
+  text-align: center;
+}
+
+.notification__login_message {
+  grid-row: 1/2;
+  padding: 8em 11em;
+}
+.notification__login_message > img {
+  height: 150px;
+  width: 150px;
+}
+.notification__authorization {
+  display: flex;
+  grid-row: 2/3;
+  justify-content: space-between;
+}
+.notification__authorization > span {
+  flex: 1;
+  text-align: center;
+  padding: 1em;
+  font-size: 1rem;
+  background-color: rgba(var(--inactive), 0.3);
+}
+.notification__authorization > span:hover {
+  color: rgb(var(--primary));
+  background-color: rgba(var(--inactive));
 }
