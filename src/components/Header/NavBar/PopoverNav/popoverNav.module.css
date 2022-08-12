@@ -1,0 +1,45 @@
+.nav {
+  position: relative;
+  color: rgb(var(--white));
+  fill: rgb(var(--white));
+  cursor: pointer;
+}
+
+.nav:hover {
+  color: rgba(var(--white), 0.6);
+  fill: rgba(var(--white), 0.6);
+}
+
+.nav:hover .nav_bar__popover {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav_bar__popover {
+  visibility: hidden;
+
+  opacity: 0;
+  transition: opacity 350ms;
+  position: absolute;
+  width: max-content;
+  height: auto;
+  color: black;
+  background-color: rgb(var(--white));
+  left: 50%;
+  top: 150%;
+  transform: translateX(-50%);
+  box-shadow: 0px 1px 8px #00000030;
+}
+
+.nav_bar__popover::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgb(var(--white));
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
