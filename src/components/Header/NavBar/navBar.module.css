@@ -1,0 +1,87 @@
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+  font-size: 0.95rem;
+}
+
+.nav_bar__left,
+.nav_bar__right {
+  display: flex;
+  gap: 1em;
+}
+
+.nav_bar__left > span,
+.nav_bar__right > span {
+  display: flex;
+  align-items: center;
+  color: rgb(var(--white));
+}
+
+.nav_bar__left > span:nth-child(2) {
+  position: relative;
+}
+.nav_bar__left > span:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  border-left: 2px solid rgba(var(--white), 0.35);
+  left: -0.55rem;
+}
+.nav_bar__left > span:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  border-left: 2px solid rgba(var(--white), 0.35);
+  right: -0.55rem;
+}
+.nav_bar__icon {
+  width: 20px;
+  height: fit-content;
+}
+
+.nav_bar__icon--facebook {
+  margin: 0 0.5em;
+}
+
+.nav_bar__icon--notification {
+  margin-right: 0.3em;
+}
+.nav_bar__icon--help {
+  margin-right: 0.3em;
+}
+
+.nav_bar__icon--globe {
+  margin-right: 0.3em;
+}
+.nav_bar__icon--down_arrow {
+  width: 12px;
+  height: 12px;
+  margin-left: 0.3em;
+}
+
+.nav_bar__button {
+  color: rgb(var(--white));
+  fill: rgb(var(--white));
+}
+
+.nav_bar__button:hover {
+  cursor: pointer;
+  color: rgba(var(--white), 0.6);
+  fill: rgba(var(--white), 0.6);
+}
+
+.nav_bar__right > span:last-child {
+  position: relative;
+}
+.nav_bar__right > span:last-child::before {
+  position: absolute;
+  content: "";
+  left: -0.6em;
+  height: 1rem;
+  border-left: 2px solid rgba(var(--white), 0.35);
+}
+
+.nav_bar__authorization {
+  font-weight: 500;
+}
