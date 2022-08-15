@@ -20,6 +20,8 @@ const banners = [
 const CarouselBanner = () => {
   const [currentSelected, setCurrentSelected] = useState<number>(0);
   const sliderRef = useRef<HTMLDivElement | null>(null);
+  const bannerRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     if (sliderRef.current === null) return;
     sliderRef.current.style.transform = `translateX(-${
@@ -53,8 +55,62 @@ const CarouselBanner = () => {
     };
   }, [currentSelected]);
 
+  /**Mouse/Touch Sliding  */
+  useEffect(() => {
+    const bannerElement = bannerRef.current;
+    const sliderElement = sliderRef.current;
+    if (bannerElement === null) return;
+    if (sliderElement === null) return;
+
+    let isPressed: boolean = false;
+    let startX: number = 0;
+    let dragX: number = 0;
+
+    const onMouseLeave = () => {
+      isPressed = false;
+    };
+    const onMouseDown = <T extends Event>(e: T) => {
+      isPressed = true;
+      bannerElement.style.cursor = "grabbing";
+      if (e instanceof MouseEvent) startX = e.clientX;
+      if (e instanceof TouchEvent) startX = e.touches[0].clientX;
+    };
+    const onMouseUp = () => {
+      isPressed = false;
+      const TRIGGER = 100;
+
+      bannerElement.style.cursor = "grab";
+      if (Math.abs(dragX) > TRIGGER) {
+        if (Math.sign(dragX) < 0) onNextBannerClicked();
+        else onPrevBannerClicked();
+      }
+    };
+
+    const onMouseMove = <T extends Event>(e: T) => {
+      if (isPressed === false) return;
+
+      if (e instanceof MouseEvent) dragX = e.clientX - startX;
+      if (e instanceof TouchEvent) dragX = e.touches[0].clientX - startX;
+    };
+    bannerElement.addEventListener("mousedown", onMouseDown);
+    bannerElement.addEventListener("mouseup", onMouseUp);
+    bannerElement.addEventListener("mousemove", onMouseMove);
+    bannerElement.addEventListener("mouseleave", onMouseLeave);
+    bannerElement.addEventListener("touchstart", onMouseDown);
+    bannerElement.addEventListener("touchend", onMouseUp);
+    bannerElement.addEventListener("touchmove", onMouseMove);
+    bannerElement.addEventListener("touchend", onMouseLeave);
+
+    return () => {
+      bannerElement.removeEventListener("mousedown", onMouseDown);
+      bannerElement.removeEventListener("mouseup", onMouseUp);
+      bannerElement.removeEventListener("mousemove", onMouseMove);
+      bannerElement.removeEventListener("mouseleave", onMouseLeave);
+    };
+  }, []);
+
   return (
-    <div className={styles["carousel_banner"]}>
+    <div className={styles["carousel_banner"]} ref={bannerRef}>
       <div className={styles["carousel_banner__slider"]} ref={sliderRef}>
         {banners.map((banner, index) => (
           <img
@@ -62,6 +118,7 @@ const CarouselBanner = () => {
             src={banner}
             className={styles["slide"]}
             alt={`banner ${index}`}
+            draggable={false}
           />
         ))}
       </div>

@@ -3,7 +3,7 @@
   width: 60%;
   aspect-ratio: 900/270;
   overflow: hidden;
-  cursor: pointer;
+  cursor: grab;
   user-select: none;
 }
 .carousel_banner__slider {
@@ -55,6 +55,7 @@ input[type="radio"]:checked:after {
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 200ms ease-in-out;
+  cursor: pointer;
 }
 .carousel_banner:hover .carousel_banner__arrow {
   opacity: 1;
