@@ -1,0 +1,12 @@
+.feature {
+  width: fit-content;
+  text-align: center;
+}
+.feature__icon {
+  display: flex;
+  margin: auto;
+  width: 45px;
+  height: 45px;
+  border-radius: 25%;
+  border: 1px solid rgba(var(--black), 0.2);
+}
