@@ -1,6 +1,5 @@
 .carousel_banner {
   position: relative;
-  width: 60%;
   aspect-ratio: 900/270;
   overflow: hidden;
   cursor: grab;
