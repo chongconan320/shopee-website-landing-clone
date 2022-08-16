@@ -1,11 +1,15 @@
 import styles from "./feature.module.css";
-const Feature = () => {
-  const label = "Shop Malaysia";
-  const;
+
+interface IFeature {
+  icon?: string;
+  label: string;
+}
+
+const Feature = ({ icon, label }: IFeature) => {
   return (
     <div className={styles["feature"]}>
       <div className={styles["feature__icon"]}></div>
-      {label}
+      <span>{label}</span>
     </div>
   );
 };

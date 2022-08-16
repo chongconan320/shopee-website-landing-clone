@@ -1,3 +1,4 @@
 import Banner from "./Banner";
 import Featured from "./Featured";
-export { Banner, Featured };
+import Main from "./Main";
+export { Banner, Featured, Main };

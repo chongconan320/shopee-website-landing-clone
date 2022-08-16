@@ -1,9 +1,10 @@
 .banner {
   display: grid;
   grid-template-rows: auto auto;
-  grid-template-columns: 70% auto;
+  grid-template-columns: 67% auto;
   gap: 10px;
   margin: 2.5em auto;
+  
 }
 
 .banner__carousel_banner {

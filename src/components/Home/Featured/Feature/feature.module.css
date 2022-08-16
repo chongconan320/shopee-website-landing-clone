@@ -1,6 +1,7 @@
 .feature {
   width: fit-content;
   text-align: center;
+  cursor: pointer;
 }
 .feature__icon {
   display: flex;
@@ -9,4 +10,18 @@
   height: 45px;
   border-radius: 25%;
   border: 1px solid rgba(var(--black), 0.2);
+  margin-bottom: .5em;
+}
+
+.feature > span {
+  display: block;
+  width: 7em;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+}
+
+.feature:hover span {
+  text-decoration: underline;
 }
