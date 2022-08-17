@@ -5,7 +5,9 @@
   --inactive: 237, 237, 237;
   --black: 0, 0, 0;
   --white: 255, 255, 255;
-  --main:254, 246, 245; 
+  --main: 241, 238, 238;
+  --main-border: 230, 227, 227;
+  --text-secondary: 145, 143, 143;
 }
 
 html,

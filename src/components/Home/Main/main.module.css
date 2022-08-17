@@ -1,15 +1,97 @@
 .main {
-    background-color: rgb(var(--main));
-    text-align: right;
+  background-color: rgb(var(--main));
+  margin: 2em 0;
+  border: 2px solid rgb(var(--main-border));
+  border-left: 0;
+  border-right: 0;
+  max-width: inherit;
 }
 .main__banner {
-    width: 100%;
-    margin-top: 1.5em;
+  width: 100%;
+  margin-top: 1.5em;
 }
-.main__free_shipping {
-    margin:1em 0;
-    background-color: rgb(var(--white));
+.main__categories {
+  display: grid;
+  position: relative;
+  grid-template-rows: min-content auto;
+  background-color: rgb(var(--white));
+  margin: 1em 0;
 }
-.main__free_shipping > img {
-   width: 100%;
+
+.categories__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 1.2em 0.8em;
+  grid-row: 1/2;
+  color: rgb(var(--text-secondary));
+}
+.categories__list_wrapper {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  overflow: hidden;
+  z-index: 1;
+  scroll-behavior: smooth;
+}
+.categories__list {
+  display: flex;
+}
+
+.categories__arrows {
+  position: relative;
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.categories__arrow_wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(var(--white));
+  border-radius: 50%;
+  box-shadow: 0 2px 9px 2px rgba(var(--black), 0.3);
+  transition: height 300ms, width 300ms;
+  cursor: pointer;
+  z-index: 2;
+  top: 50%;
+}
+
+.categories__arrow_wrapper--left {
+  transform: translateX(-50%) translateY(-50%);
+  left: 0;
+}
+.categories__arrow_wrapper > .categories__arrow {
+  width: 10px;
+  height: 10px;
+  transition: height 300ms, width 300ms;
+}
+
+.categories__arrow_wrapper--left > .categories__arrow {
+  transform: rotateZ(90deg);
+}
+
+.categories__list_wrapper:hover
+  + .categories__arrows
+  > .categories__arrow_wrapper,
+.categories__arrow_wrapper:hover {
+  height: 45px;
+  width: 45px;
+}
+
+.categories__arrow_wrapper--right {
+  transform: translateX(50%) translateY(-50%);
+  right: 0;
+}
+.categories__arrow_wrapper--right > .categories__arrow {
+  transform: rotateZ(-90deg);
+}
+.categories__list_wrapper:hover
+  + .categories__arrows
+  > .categories__arrow_wrapper
+  > .categories__arrow,
+.categories__arrow_wrapper:hover .categories__arrow {
+  height: 20px;
+  width: 20px;
 }
