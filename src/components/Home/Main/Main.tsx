@@ -3,6 +3,7 @@ import styles from "./main.module.css";
 
 import Image_MainBanner1 from "assets/images/main_banner1.jpg";
 import Categories from "./Categories";
+import ShockingSale from "../ShockingSale";
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
         alt={"Free welcome gift"}
       />
       <Categories />
+      <ShockingSale />
     </Wrapper>
   );
 };

@@ -1,0 +1,27 @@
+.shocking_sale {
+  background-color: rgb(var(--white));
+  padding: 0 1.5em;
+}
+.shocking_sale__title {
+  height: 20px;
+}
+
+.shocking_sale__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em 0;
+  margin-bottom: 1em;
+}
+
+.header__browser_all {
+  cursor: pointer;
+}
+
+.shocking_sale__icon--right_arrow {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  transform: rotateZ(-90deg);
+  margin-left: 0.3em;
+}
