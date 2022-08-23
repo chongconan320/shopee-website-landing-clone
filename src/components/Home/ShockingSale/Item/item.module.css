@@ -1,12 +1,13 @@
 .item {
   width: fit-content;
   cursor: pointer;
+  user-select: none;
+  text-decoration: none;
 }
 
 .item__product {
   position: relative;
-  height: 175px;
-  width: 175px;
+  aspect-ratio: 1;
 }
 .product__image--product {
   position: absolute;
@@ -26,7 +27,6 @@
   width: 45px;
   top: 0;
   right: 0;
-  transform: translateX(50%) translateY(-50%);
   text-align: center;
   font-size: 1.2em;
   padding: 0.25em;
