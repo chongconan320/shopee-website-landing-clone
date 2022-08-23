@@ -29,16 +29,18 @@ const Categories = () => {
         ref={categoriesListRef}
       >
         <div className={styles["categories__list"]}>
-          {Array.from(Array(12).keys()).map((value) => {
+          {Array.from(Array(12).keys()).map((value, index) => {
             if (value === 23)
               return (
-                <div>
+                <div key={index}>
                   <Category
+                    key={index}
                     alt={"Health "}
                     src={Image_Health_and_Beauty}
                     label={"Health "}
                   />
                   <Category
+                    key={index}
                     alt={"Health & Beauty"}
                     src={Image_Health_and_Beauty}
                     label={"Health & Beauty"}
@@ -46,7 +48,7 @@ const Categories = () => {
                 </div>
               );
             return (
-              <div>
+              <div key={index}>
                 <Category
                   alt={"Health & Beauty"}
                   src={Image_Health_and_Beauty}

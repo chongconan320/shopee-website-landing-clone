@@ -16,8 +16,8 @@ const Featured = () => {
   ];
   return (
     <Wrapper contentStyle={styles["featured"]}>
-      {features.map((feature) => (
-        <Feature label={feature} />
+      {features.map((feature, index) => (
+        <Feature label={feature} key={index} />
       ))}
     </Wrapper>
   );
