@@ -1,5 +1,6 @@
 .shocking_sale {
   background-color: rgb(var(--white));
+  padding-bottom: 1em;
 }
 .shocking_sale__title {
   height: 20px;

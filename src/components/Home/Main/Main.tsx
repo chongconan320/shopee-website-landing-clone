@@ -1,9 +1,10 @@
 import Wrapper from "components/General/Wrapper";
 import styles from "./main.module.css";
 
-import Image_MainBanner1 from "assets/images/main_banner1.jpg";
+import Image_MainBanner1 from "assets/images/main_banners.jpg";
 import Categories from "./Categories";
 import ShockingSale from "../ShockingSale";
+import Banners from "./Banners";
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
       />
       <Categories />
       <ShockingSale />
+      <Banners />
     </Wrapper>
   );
 };

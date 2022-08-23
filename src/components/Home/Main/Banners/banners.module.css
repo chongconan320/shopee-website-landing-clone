@@ -1,0 +1,17 @@
+.banners {
+  position: relative;
+}
+.banners__images {
+  width: 100%;
+}
+.banners__links {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  gap: 1em;
+}
+.banner__link {
+  width: 100%;
+  height: 100%;
+}
