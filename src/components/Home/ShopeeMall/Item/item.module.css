@@ -1,0 +1,17 @@
+.item {
+  position: relative;
+  display: block;
+  aspect-ratio: 201/241;
+  height: 50%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.item > span {
+  position: absolute;
+  width: 100%;
+  font-size: 1.3rem;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -5,6 +5,7 @@ import Image_MainBanner1 from "assets/images/main_banners.jpg";
 import Categories from "./Categories";
 import ShockingSale from "../ShockingSale";
 import Banners from "./Banners";
+import ShopeeMall from "../ShopeeMall";
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
       <Categories />
       <ShockingSale />
       <Banners />
+      <ShopeeMall />
     </Wrapper>
   );
 };
