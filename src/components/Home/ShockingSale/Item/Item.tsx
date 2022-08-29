@@ -1,6 +1,7 @@
 import styles from "./item.module.css";
 import Image_ShockingSaleLabel from "assets/images/shocking_sale_label.png";
 import { AnchorHTMLAttributes, forwardRef } from "react";
+import Discount from "components/General/Discount";
 
 interface IItem extends AnchorHTMLAttributes<HTMLAnchorElement> {
   productImg: string;
@@ -28,10 +29,7 @@ const Item = forwardRef<HTMLAnchorElement, IItem>(
             alt={"label"}
             className={styles["product__image--label"]}
           />
-          <div className={styles["product__discount"]}>
-            <span>{discount}%</span>
-            <span>OFF</span>
-          </div>
+          <Discount discount={discount} width={40} height={45} />
         </div>
         <div className={styles["item__price"]}>
           <span>RM</span>

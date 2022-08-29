@@ -1,5 +1,6 @@
 .shopeeMall {
   background-color: rgb(var(--white));
+  margin-bottom: 1.5em;
 }
 .shopeeMall__header {
   padding: 1.2em 0;

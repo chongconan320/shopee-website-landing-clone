@@ -6,6 +6,7 @@ import Categories from "./Categories";
 import ShockingSale from "../ShockingSale";
 import Banners from "./Banners";
 import ShopeeMall from "../ShopeeMall";
+import ProductList from "components/ProductList";
 
 const Main = () => {
   return (
@@ -19,6 +20,7 @@ const Main = () => {
       <ShockingSale />
       <Banners />
       <ShopeeMall />
+      <ProductList />
     </Wrapper>
   );
 };
