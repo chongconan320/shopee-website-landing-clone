@@ -1,10 +1,11 @@
 .main {
   background-color: rgb(var(--main));
-  margin: 2em 0;
+  margin-top: 2em;
   border: 2px solid rgb(var(--main-border));
   border-left: 0;
   border-right: 0;
   max-width: inherit;
+  padding-bottom: 5em;
 }
 .main__banner {
   width: 100%;

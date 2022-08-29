@@ -1,5 +1,5 @@
 import Header from "components/Header";
-import { Banner, Featured, Main } from "components/Home";
+import { Banner, Featured, Main, Footer } from "components/Home";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Banner />
       <Featured />
       <Main />
+      <Footer />
     </div>
   );
 }

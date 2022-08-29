@@ -1,0 +1,12 @@
+.footer {
+  padding: 4em 0;
+  border-top: 5px solid rgb(var(--primary));
+  color: rgba(var(--black), 0.5);
+}
+.footer__divider {
+  height: 1px;
+  background-color: rgb(var(--main-border));
+  color: rgb(var(--main-border));
+  border: 0;
+  margin: 3.5em 0;
+}

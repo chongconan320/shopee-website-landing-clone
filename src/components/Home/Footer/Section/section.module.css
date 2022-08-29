@@ -1,0 +1,13 @@
+.section {
+  margin-bottom: 3em;
+}
+.section:last-of-type {
+  margin-bottom: 0;
+}
+.section > h3 {
+  color: rgb(var(--primary));
+}
+.section > p {
+  font-size: 0.9rem;
+  color: rgba(var(--black), 0.5);
+}
