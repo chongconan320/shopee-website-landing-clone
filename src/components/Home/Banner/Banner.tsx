@@ -33,14 +33,14 @@ const Banner = () => {
         <div className={styles["banner__carousel_banner"]} ref={carouselRef}>
           <CarouselBanner />
         </div>
-        <a href="/">
+        <a href="/" className={styles["banner__normal_banner"]}>
           <img
             src={Image_Banner6}
             style={{ height: `${imageHeight}px` }}
             alt={"Banner6"}
           />
         </a>
-        <a href="/">
+        <a href="/" className={styles["banner__normal_banner"]}>
           <img
             src={Image_Banner7}
             style={{ height: `${imageHeight}px` }}

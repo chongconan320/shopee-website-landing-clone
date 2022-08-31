@@ -81,3 +81,7 @@ input[type="radio"]:checked:after {
 .carousel_banner__arrow_icon--right {
   transform: rotateZ(-90deg);
 }
+
+.slide {
+  width: 100%;
+}
