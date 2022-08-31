@@ -5,10 +5,10 @@ function App() {
   return (
     <div>
       <Header />
-      <Banner />
+      {/* <Banner />
       <Featured />
       <Main />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

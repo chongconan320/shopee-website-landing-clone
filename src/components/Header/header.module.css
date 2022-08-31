@@ -53,3 +53,49 @@
 .header__features > ul > li:last-child {
   margin-right: 0;
 }
+
+.header__icon--hamburger {
+  width: 30px;
+  fill: rgb(var(--white));
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__content {
+    display: grid;
+    grid-template-columns: min-content auto min-content;
+    grid-template-rows: auto auto auto;
+  }
+
+  .header__navbar {
+    display: none;
+  }
+  .header__cart {
+    display: none;
+  }
+  .header__features {
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+  .header__search_bar {
+    margin-top: 1em;
+    grid-row: 2/3;
+    grid-column: 1/4;
+  }
+  .header__logo {
+    width: 100px;
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+  .header__icon--hamburger {
+    cursor: pointer;
+    display: block;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .header__menu {
+    display: block;
+  }
+}
