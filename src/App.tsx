@@ -7,7 +7,7 @@ function App() {
       <Header />
       <Banner />
       <Featured />
-      {/* <Main /> */}
+      <Main />
       <Footer />
     </div>
   );

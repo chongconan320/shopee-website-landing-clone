@@ -1,6 +1,6 @@
 .product {
   position: relative;
-  width: 190px;
+  width: 100%;
   cursor: pointer;
   box-shadow: 0 2px 6px 4px rgba(var(--black), 0.05);
 }
