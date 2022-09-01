@@ -4,18 +4,14 @@
   cursor: pointer;
 }
 .feature__icon {
-  display: flex;
-  margin: auto;
   width: 45px;
   height: 45px;
-  border-radius: 25%;
-  border: 1px solid rgba(var(--black), 0.2);
-  margin-bottom: .5em;
+  margin-bottom: 0.3em;
 }
 
 .feature > span {
   display: block;
-  width: 7em;
+  width: 8em;
 }
 
 .feature:hover {

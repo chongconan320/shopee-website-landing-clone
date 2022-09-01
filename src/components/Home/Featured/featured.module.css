@@ -1,6 +1,7 @@
-
 .featured {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  column-gap: 0.3em;
+  justify-items: center;
+  row-gap: 2em;
 }

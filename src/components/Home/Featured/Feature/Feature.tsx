@@ -1,4 +1,5 @@
 import styles from "./feature.module.css";
+import Image_Feature from "assets/images/feature.png";
 
 interface IFeature {
   icon?: string;
@@ -8,7 +9,11 @@ interface IFeature {
 const Feature = ({ icon, label }: IFeature) => {
   return (
     <div className={styles["feature"]}>
-      <div className={styles["feature__icon"]}></div>
+      <img
+        src={Image_Feature}
+        alt={label}
+        className={styles["feature__icon"]}
+      />
       <span>{label}</span>
     </div>
   );
