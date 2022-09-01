@@ -20,7 +20,11 @@ const features = [
 const Header = () => {
   const [isMenuExpanded, setIsMenuExpanded] = useState(false);
   const onToggleMenu = () => {
-    setIsMenuExpanded((prev) => !prev);
+    setIsMenuExpanded((prev) => {
+      if (prev === false) document.body.style.overflow = "hidden";
+      if (prev === true) document.body.style.overflow = "auto";
+      return !prev;
+    });
   };
   return (
     <>

@@ -1,6 +1,9 @@
 .header {
+  position: sticky;
+  top: 0;
   background: linear-gradient(-180deg, #f53d2d, #f63);
   padding: 0.5em 0em;
+  z-index: 99;
 }
 .header__content {
   display: grid;

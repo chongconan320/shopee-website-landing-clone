@@ -7,8 +7,8 @@ function App() {
       <Header />
       <Banner />
       <Featured />
-      {/* <Main />
-      <Footer /> */}
+      {/* <Main /> */}
+      <Footer />
     </div>
   );
 }

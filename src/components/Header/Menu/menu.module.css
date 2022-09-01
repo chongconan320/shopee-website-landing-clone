@@ -1,17 +1,17 @@
 .menu {
-  display: none;
   position: absolute;
   background-color: rgb(var(--white));
   height: calc(100vh - 50px - 1em);
   width: 100vw;
   top: calc(50px + 1em);
-  left: -100%;
+  left: -150%;
   transition: left 225ms ease-in-out;
   box-shadow: 1px 0 5px 2px rgba(var(--black), 0.05);
   z-index: 99;
 }
 .menu--open {
   left: 0;
+  overflow: hidden;
 }
 
 .menu__list {
