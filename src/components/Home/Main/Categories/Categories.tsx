@@ -2,25 +2,12 @@ import styles from "./categories.module.css";
 
 import Category from "./Category";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Image_Health_and_Beauty from "assets/images/heath_and_beauty.png";
-import { ReactComponent as IconDownArrow } from "assets/icons/down-arrow.svg";
 
 const Categories = () => {
   const categoriesListRef = useRef<HTMLDivElement | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  const onNextClicked = () => {
-    if (categoriesListRef.current === null) return;
-    const scrollWidth = categoriesListRef.current.scrollWidth;
-    categoriesListRef.current.scrollLeft = scrollWidth;
-    setIsScrolled(true);
-  };
-  const onPrevClicked = () => {
-    if (categoriesListRef.current === null) return;
-    categoriesListRef.current.scrollLeft = 0;
-    setIsScrolled(false);
-  };
   return (
     <div className={styles["main__categories"]}>
       <span className={styles["categories__title"]}>Categories</span>
@@ -63,24 +50,6 @@ const Categories = () => {
             );
           })}
         </div>
-      </div>
-      <div className={styles["categories__arrows"]}>
-        {isScrolled && (
-          <div
-            onClick={onPrevClicked}
-            className={`${styles["categories__arrow_wrapper"]} ${styles["categories__arrow_wrapper--left"]}`}
-          >
-            <IconDownArrow className={styles["categories__arrow"]} />
-          </div>
-        )}
-        {!isScrolled && (
-          <div
-            onClick={onNextClicked}
-            className={`${styles["categories__arrow_wrapper"]} ${styles["categories__arrow_wrapper--right"]}`}
-          >
-            <IconDownArrow className={styles["categories__arrow"]} />
-          </div>
-        )}
       </div>
     </div>
   );

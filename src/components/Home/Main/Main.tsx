@@ -16,7 +16,7 @@ const Main = () => {
         className={styles["main__banner"]}
         alt={"Free welcome gift"}
       />
-      {/* <Categories /> */}
+      <Categories />
       <ShockingSale />
       <Banners />
       <ShopeeMall />

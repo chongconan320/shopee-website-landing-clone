@@ -45,10 +45,9 @@
   flex: 1;
 }
 .shopeeMall__items__list::-webkit-scrollbar {
-  height: 8px;
+  height: 4px;
   background-color: white;
   box-shadow: inset 0 0 8px 12px rgba(var(--black), 0.15);
-  border-radius: 30px;
 }
 
 .shopeeMall__items__list::-webkit-scrollbar-thumb {
@@ -92,9 +91,6 @@
   }
   .shopeeMall__title::after {
     display: none;
-  }
-
-  .shopeeMall__advertising {
   }
 
   .shopeeMall__items {
