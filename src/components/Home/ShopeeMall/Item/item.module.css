@@ -1,17 +1,24 @@
 .item {
-  position: relative;
   display: block;
-  aspect-ratio: 201/241;
-  height: 50%;
+  position: relative;
+  height: 240px;
+  width: 200px;
   text-align: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .item > span {
   position: absolute;
   width: 100%;
   font-size: 1.3rem;
-  bottom: 1em;
+  bottom: 0.7em;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    width: 150px;
+    height: 190px;
+  }
 }

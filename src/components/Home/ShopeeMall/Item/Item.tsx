@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, forwardRef } from "react";
+import { AnchorHTMLAttributes } from "react";
 import styles from "./item.module.css";
 
 interface IItem extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -6,20 +6,18 @@ interface IItem extends AnchorHTMLAttributes<HTMLAnchorElement> {
   label: string;
 }
 
-const Item = forwardRef<HTMLAnchorElement, IItem>(
-  ({ img, href, label }: IItem, ref) => {
-    return (
-      <a
-        ref={ref}
-        href={href}
-        className={styles["item"]}
-        style={{
-          backgroundImage: `url(${img})`,
-        }}
-      >
-        <span>{label}</span>
-      </a>
-    );
-  }
-);
+const Item = ({ img, href, label }: IItem) => {
+  return (
+    <a
+      href={href}
+      className={styles["item"]}
+      style={{
+        backgroundImage: `url(${img})`,
+      }}
+    >
+      <span>{label}</span>
+    </a>
+  );
+};
+
 export default Item;

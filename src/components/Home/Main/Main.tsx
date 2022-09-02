@@ -18,8 +18,8 @@ const Main = () => {
       />
       {/* <Categories />
       <ShockingSale />
-      <Banners />
-      <ShopeeMall /> */}
+      <Banners /> */}
+      <ShopeeMall />
       <ProductList />
     </Wrapper>
   );

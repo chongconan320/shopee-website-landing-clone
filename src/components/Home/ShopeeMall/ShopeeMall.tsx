@@ -17,27 +17,6 @@ const ShopeeMall = () => {
   const itemsWrapperRef = useRef<HTMLDivElement>(null);
   const [itemWidth, setItemWidth] = useState(0);
   const [isNextClicked, setIsNextClicked] = useState<boolean>(false);
-  const onNextClicked = () => {
-    const itemsWrapperEl = itemsWrapperRef.current;
-    if (itemsWrapperEl === null) return;
-    setIsNextClicked(true);
-    itemsWrapperEl.scrollLeft = itemsWrapperEl.scrollWidth;
-  };
-  const onPreviousClicked = () => {
-    const itemsWrapperEl = itemsWrapperRef.current;
-    if (itemsWrapperEl === null) return;
-
-    setIsNextClicked(false);
-    itemsWrapperEl.scrollLeft = 0;
-  };
-  useEffect(() => {
-    const itemsListEl = itemsListRef.current;
-    const itemsEl = itemsRef.current;
-    if (itemsListEl === null || itemsEl === null) return;
-
-    const width = Math.floor(itemsListEl.clientWidth / 4);
-    setItemWidth(width);
-  }, []);
 
   return (
     <div className={styles["shopeeMall"]}>
@@ -76,66 +55,32 @@ const ShopeeMall = () => {
           className={styles["shopeeMall__images--bosch"]}
           alt={"Bosch"}
         />
-        <div className={styles["shopeeMall__promotions"]} ref={itemsListRef}>
-          {isNextClicked === true && (
-            <div
-              onClick={onPreviousClicked}
-              className={`${styles["shopeeMall__arrows"]} ${styles["shopeeMall__arrows--left"]}`}
-            >
-              <IconArrow
-                className={`${styles["shopeeMall__items_arrow"]} ${styles["shopeeMall__items_arrow--left"]}`}
+        <div className={styles["shopeeMall__items__list"]}>
+          {Array.from(Array(8).keys()).map((value, index) => (
+            <div key={index}>
+              <Item
+                img={Image_PhilipsProduct}
+                href={"/"}
+                label={"Up to 55% Off"}
               />
-            </div>
-          )}
-          {isNextClicked !== true && (
-            <div
-              onClick={onNextClicked}
-              className={`${styles["shopeeMall__arrows"]} ${styles["shopeeMall__arrows--right"]}`}
-            >
-              <IconArrow
-                className={`${styles["shopeeMall__items_arrow"]} ${styles["shopeeMall__items_arrow--right"]} `}
-              />
-            </div>
-          )}
-
-          <div
-            className={styles["shopeeMall__items__list_wrapper"]}
-            ref={itemsWrapperRef}
-          >
-            <div className={styles["shopeeMall__items__list"]}>
-              {Array.from(Array(8).keys()).map((value, index) => (
-                <div
-                  key={index}
-                  style={{ height: "100%", width: `${itemWidth}px` }}
-                  ref={itemsRef}
-                >
-                  <Item
-                    img={Image_PhilipsProduct}
-                    href={"/"}
-                    label={"Up to 55% Off"}
-                  />
-                  {index === 7 ? (
-                    <a href={"/"} className={styles["shopeeMall_see_all"]}>
-                      <span>See All </span>{" "}
-                      <span
-                        className={styles["shopeeMall__see_all_arrow_wrapper"]}
-                      >
-                        <IconArrow
-                          className={styles["shopeeMall__see_all_arrow"]}
-                        />
-                      </span>
-                    </a>
-                  ) : (
-                    <Item
-                      img={Image_BoschProduct}
-                      href={"/"}
-                      label={"RM18 Off Voucher"}
+              {index === 7 ? (
+                <a href={"/"} className={styles["shopeeMall_see_all"]}>
+                  <span>See All </span>{" "}
+                  <span className={styles["shopeeMall__see_all_arrow_wrapper"]}>
+                    <IconArrow
+                      className={styles["shopeeMall__see_all_arrow"]}
                     />
-                  )}
-                </div>
-              ))}
+                  </span>
+                </a>
+              ) : (
+                <Item
+                  img={Image_BoschProduct}
+                  href={"/"}
+                  label={"RM18 Off Voucher"}
+                />
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
