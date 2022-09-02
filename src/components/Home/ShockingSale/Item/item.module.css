@@ -7,6 +7,7 @@
 
 .item__product {
   position: relative;
+  height: 200px;
   aspect-ratio: 1;
 }
 .product__image--product {
@@ -90,4 +91,11 @@
   border-bottom: 10px solid transparent;
   border-right: 25px solid rgba(255, 212, 36, 0.9);
   transform: translateY(50%);
+}
+@media screen and (max-width: 768px) {
+  .item__product {
+    position: relative;
+    height: 150px;
+    aspect-ratio: 1;
+  }
 }
