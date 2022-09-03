@@ -40,8 +40,8 @@ const ProductList = () => {
         </div>
       </div>
       <div className={styles["product_list__products"]}>
-        {Array.from(Array(20).keys()).map(() => (
-          <Product />
+        {Array.from(Array(20).keys()).map((value) => (
+          <Product key={value} />
         ))}
       </div>
       <div className={styles["product_list__see_more"]}>See more</div>

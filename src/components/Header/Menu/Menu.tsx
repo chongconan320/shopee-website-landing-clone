@@ -6,14 +6,38 @@ import { ReactComponent as IconDownArrow } from "assets/icons/down-arrow.svg";
 import { ReactComponent as IconNotification } from "assets/icons/notification.svg";
 import { ReactComponent as IconHelp } from "assets/icons/help.svg";
 import { ReactComponent as IconCart } from "assets/icons/cart.svg";
+import { useEffect, useRef } from "react";
 
 interface IMenu {
   isMenuExpanded: boolean;
 }
 
 const Menu = ({ isMenuExpanded }: IMenu) => {
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  /** Navigation bar on mobile device will block part of the view,
+   * therefore the height will changed based on the innerHeight of browser
+   */
+  useEffect(() => {
+    const menuEl = menuRef.current;
+    if (menuEl === null) return;
+    const onResize = (event: Event) => {
+      const target = event.target as Window;
+      menuEl.style.height = `${target.innerHeight - 50 - 14}px `;
+    };
+
+    const { innerHeight } = window;
+    menuEl.style.height = `${innerHeight - 50 - 14}px `;
+
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
   return (
     <div
+      ref={menuRef}
       className={`${styles["menu"]} ${isMenuExpanded && styles["menu--open"]}`}
     >
       <ul className={styles["menu__list"]}>

@@ -1,17 +1,17 @@
 .menu {
+  display: block;
   position: absolute;
   background-color: rgb(var(--white));
-  height: calc(100vh - 50px - 1em);
   width: 100vw;
   top: calc(50px + 1em);
-  left: -150%;
+  left: -125%;
   transition: left 225ms ease-in-out;
   box-shadow: 1px 0 5px 2px rgba(var(--black), 0.05);
   z-index: 99;
+  visibility: hidden;
 }
 .menu--open {
   left: 0;
-  overflow: hidden;
 }
 
 .menu__list {
@@ -156,6 +156,6 @@
 
 @media screen and (max-width: 768px) {
   .menu {
-    display: block;
+    visibility: visible;
   }
 }

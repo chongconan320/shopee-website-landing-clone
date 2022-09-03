@@ -25,16 +25,11 @@
   transform: rotateZ(-90deg);
   margin-left: 0.3em;
 }
-.shocking_sale__items {
-  position: relative;
-}
 
 .shocking_sale__items_wrapper {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-behavior: smooth;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
   padding: 0 1.5em;
   gap: 35px;
   padding-bottom: 1.5em;

@@ -73,7 +73,8 @@ const CarouselBanner = () => {
       isPressed = true;
       bannerElement.style.cursor = "grabbing";
       if (e instanceof MouseEvent) startX = e.clientX;
-      if (e instanceof TouchEvent) startX = e.touches[0].clientX;
+      if (window.TouchEvent && e instanceof TouchEvent)
+        startX = e.touches[0].clientX;
     };
     const onMouseUp = () => {
       const TRIGGER = 100;
@@ -92,7 +93,8 @@ const CarouselBanner = () => {
       if (isPressed === false) return;
 
       if (e instanceof MouseEvent) dragX = e.clientX - startX;
-      if (e instanceof TouchEvent) dragX = e.touches[0].clientX - startX;
+      if (window.TouchEvent && e instanceof TouchEvent)
+        dragX = e.touches[0].clientX - startX;
     };
     bannerElement.addEventListener("mousedown", onMouseDown);
     bannerElement.addEventListener("mouseup", onMouseUp);

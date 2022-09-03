@@ -12,9 +12,6 @@ import { useRef } from "react";
 const ITEMS_RENDER_AMOUNT = 20;
 
 const ShockingSale = () => {
-  const shockingSalesRef = useRef<HTMLDivElement>(null);
-  const itemsWrapperRef = useRef<HTMLDivElement>(null);
-
   return (
     <div className={styles["shocking_sale"]}>
       <div className={styles["shocking_sale__header"]}>
@@ -31,24 +28,19 @@ const ShockingSale = () => {
           <IconArrow className={styles["shocking_sale__icon--right_arrow"]} />
         </div>
       </div>
-      <div className={styles["shocking_sale__items"]} ref={shockingSalesRef}>
-        <div
-          className={styles["shocking_sale__items_wrapper"]}
-          ref={itemsWrapperRef}
-        >
-          {Array.from(Array(ITEMS_RENDER_AMOUNT).keys()).map((value, index) => {
-            return (
-              <Item
-                key={index}
-                productImg={Image_ShockingSaleItem}
-                discount={42}
-                sold={index}
-                total={250}
-                href={"/"}
-              />
-            );
-          })}
-        </div>
+      <div className={styles["shocking_sale__items_wrapper"]}>
+        {Array.from(Array(ITEMS_RENDER_AMOUNT).keys()).map((value, index) => {
+          return (
+            <Item
+              key={index}
+              productImg={Image_ShockingSaleItem}
+              discount={42}
+              sold={index}
+              total={250}
+              href={"/"}
+            />
+          );
+        })}
       </div>
     </div>
   );

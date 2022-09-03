@@ -1,6 +1,6 @@
 import styles from "./item.module.css";
 import Image_ShockingSaleLabel from "assets/images/shocking_sale_label.png";
-import { AnchorHTMLAttributes, forwardRef } from "react";
+import { AnchorHTMLAttributes } from "react";
 import Discount from "components/General/Discount";
 
 interface IItem extends AnchorHTMLAttributes<HTMLAnchorElement> {

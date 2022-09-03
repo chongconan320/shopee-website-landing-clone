@@ -17,3 +17,10 @@
 .category:hover {
   box-shadow: 1px 1px 5px 3px rgba(var(--black), 0.05);
 }
+
+@media screen and (max-width: 768px) {
+  .category__image {
+    width: 80px;
+    height: 80px;
+  }
+}
