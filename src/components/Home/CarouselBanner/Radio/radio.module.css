@@ -1,0 +1,21 @@
+.radio {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: rgb(var(--white));
+}
+
+.radio--checked {
+  background-color: rgb(var(--primary));
+}
+.radio:not(.radio:last-child) {
+  margin-right: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .radio {
+    height: 12px;
+    width: 12px;
+  }
+}

@@ -1,4 +1,3 @@
-import Countdown from "./Countdown";
 import styles from "./shockingSale.module.css";
 
 import Image_ShockingSale from "assets/images/shocking_sale.png";
@@ -7,7 +6,6 @@ import Image_ShockingSaleItem from "assets/images/shocking_sale_item.png";
 import { ReactComponent as IconArrow } from "assets/icons/down-arrow.svg";
 
 import Item from "./Item";
-import { useRef } from "react";
 
 const ITEMS_RENDER_AMOUNT = 20;
 

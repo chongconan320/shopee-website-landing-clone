@@ -8,6 +8,7 @@ import Image_Banner5 from "assets/images/banner5.png";
 
 import { ReactComponent as IconDownArrow } from "assets/icons/down-arrow.svg";
 import { useEffect, useState, useRef } from "react";
+import Radio from "./Radio";
 
 const banners = [
   Image_Banner1,
@@ -132,25 +133,7 @@ const CarouselBanner = () => {
       </div>
       <div className={styles["carousel_banner__radio_group"]}>
         {Array.from(Array(banners.length).keys()).map((value, index) => {
-          if (index === 0)
-            return (
-              <input
-                type={"radio"}
-                name={"banner"}
-                checked={currentSelected === index}
-                key={index}
-                onChange={() => onCurrentSelectedChange(index)}
-              />
-            );
-          return (
-            <input
-              type={"radio"}
-              name={"banner"}
-              key={index}
-              checked={currentSelected === index}
-              onChange={() => onCurrentSelectedChange(index)}
-            />
-          );
+          return <Radio checked={index === currentSelected} key={index} />;
         })}
       </div>
       <div
