@@ -37,8 +37,9 @@
   right: -0.55rem;
 }
 .nav_bar__icon {
+  display: block;
   width: 20px;
-  height: fit-content;
+  height: 20px;
 }
 
 .nav_bar__icon--facebook {
