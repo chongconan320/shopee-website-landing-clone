@@ -1,12 +1,14 @@
+import { HTMLAttributes } from "react";
 import styles from "./radio.module.css";
 
-interface IRadio {
+interface IRadio extends HTMLAttributes<HTMLDivElement> {
   checked: boolean;
 }
 
-const Radio = ({ checked }: IRadio) => {
+const Radio = ({ checked, onClick }: IRadio) => {
   return (
     <div
+      onClick={onClick}
       className={`${styles["radio"]} ${checked && styles["radio--checked"]}`}
     />
   );

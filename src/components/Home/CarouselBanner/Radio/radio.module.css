@@ -4,6 +4,7 @@
   width: 15px;
   border-radius: 50%;
   background-color: rgb(var(--white));
+  cursor: pointer;
 }
 
 .radio--checked {

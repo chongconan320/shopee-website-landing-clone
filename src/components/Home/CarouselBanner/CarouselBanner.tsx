@@ -133,7 +133,13 @@ const CarouselBanner = () => {
       </div>
       <div className={styles["carousel_banner__radio_group"]}>
         {Array.from(Array(banners.length).keys()).map((value, index) => {
-          return <Radio checked={index === currentSelected} key={index} />;
+          return (
+            <Radio
+              checked={index === currentSelected}
+              key={index}
+              onClick={() => onCurrentSelectedChange(index)}
+            />
+          );
         })}
       </div>
       <div
