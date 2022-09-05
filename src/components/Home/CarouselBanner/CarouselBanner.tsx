@@ -25,9 +25,7 @@ const CarouselBanner = () => {
 
   useEffect(() => {
     if (sliderRef.current === null) return;
-    sliderRef.current.style.transform = `translateX(-${
-      currentSelected * 100
-    }%)`;
+    sliderRef.current.style.left = `-${currentSelected * 100}%`;
   }, [currentSelected]);
 
   const onCurrentSelectedChange = (value: number) => {

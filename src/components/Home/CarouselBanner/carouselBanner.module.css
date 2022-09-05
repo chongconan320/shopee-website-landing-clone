@@ -6,10 +6,13 @@
   user-select: none;
 }
 .carousel_banner__slider {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s;
+  transition: left 0.5s;
 }
 .slider > img {
   object-fit: cover;
