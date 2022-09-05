@@ -1,5 +1,5 @@
 import styles from "./header.module.css";
-import Logo from "components/General/logo.svg";
+import Logo from "assets/icons/logo.svg";
 import SearchBar from "./SearchBar";
 import { ReactComponent as IconCart } from "assets/icons/cart.svg";
 import { ReactComponent as IconHamburger } from "assets/icons/hamburger.svg";
