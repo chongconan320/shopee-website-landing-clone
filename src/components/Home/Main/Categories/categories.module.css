@@ -17,7 +17,8 @@
 .categories__list_wrapper {
   grid-row: 2/3;
   grid-column: 1/2;
-  overflow: auto;
+  overflow: hidden;
+  overflow-x: auto;
   z-index: 1;
 }
 .categories__list {
