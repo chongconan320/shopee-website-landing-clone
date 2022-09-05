@@ -9,15 +9,8 @@ import Image_BoschProduct from "assets/images/bosch_product.png";
 import { ReactComponent as IconArrow } from "assets/icons/down-arrow.svg";
 
 import Item from "./Item";
-import { useEffect, useRef, useState } from "react";
 
 const ShopeeMall = () => {
-  const itemsListRef = useRef<HTMLDivElement>(null);
-  const itemsRef = useRef<HTMLDivElement>(null);
-  const itemsWrapperRef = useRef<HTMLDivElement>(null);
-  const [itemWidth, setItemWidth] = useState(0);
-  const [isNextClicked, setIsNextClicked] = useState<boolean>(false);
-
   return (
     <div className={styles["shopeeMall"]}>
       <div
